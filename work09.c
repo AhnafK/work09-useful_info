@@ -11,7 +11,7 @@ int main(){
   char * address = "text.txt";
 
   //buffer
-  char buf[27];
+  char buf[28];
   
   //Open the file with read and write flags.
   int fd = open(address,O_RDWR);
@@ -29,7 +29,7 @@ int main(){
 
   fd = open(address,O_RDWR);
   //Read again to see changes
-  read(fd,buf,26);
+  read(fd,buf,30);
   buf[27] = 0;
   printf("wrote to \"test.txt\"\nupdated file:\n%s\n",buf);
   close (fd);
